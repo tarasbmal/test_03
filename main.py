@@ -142,8 +142,8 @@ if st.session_state['button'] == True:
             f_endsum = float(fi_nominal)    
             #---------   Добавляем налог с купонов ---
             if use_nalog:
-                for index,row in pl.iterrows():
-                        pl.loc[len(pl.index)] = [pl['dates'][index],round(pl['amounts'][index]*(-0.13),2)]
+                #for index,row in pl.iterrows():
+                #        pl.loc[len(pl.index)] = [pl['dates'][index],round(pl['amounts'][index]*(-0.13),2)]
                 #--- если купили дешевле, то еще в конце срока
                 if f_buysum < f_endsum:
                     pl.loc[len(pl.index)] = [f_enddate,round((f_endsum-f_buysum)*(-0.13),2)]                              
