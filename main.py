@@ -31,13 +31,13 @@ def get_fi_data(p_isin):
     #--------------------------------
     #-----   Купоны -----------------
     #--------------------------------
-    #df = tabs[0]
-    #coup = df[["Дата купона","Купон"]]  #-- Оставим только нужные колонки
-    #coup.columns = ["cd","amounts"] #-- переименуем столбцы
-    #coup["dates"] = datetime.datetime.today()   #-- Новый столбец даты
-    #for index,row in coup.iterrows():
-    #    coup['dates'][index] = datetime.datetime.strptime(coup['cd'][index], "%d-%m-%Y")
-    #coup = coup[["dates","amounts"]]    #-- оставляем только нужные поля
+    df = tabs[0]
+    coup = df[["Дата купона","Купон"]]  #-- Оставим только нужные колонки
+    coup.columns = ["cd","amounts"] #-- переименуем столбцы
+    coup["dates"] = datetime.datetime.today()   #-- Новый столбец даты
+    for index,row in coup.iterrows():
+        coup['dates'][index] = datetime.datetime.strptime(coup['cd'][index], "%d-%m-%Y")
+    coup = coup[["dates","amounts"]]    #-- оставляем только нужные поля
     #---------------------------------------------------------
     #-----------  Поиск параметров облигации ----------------------
     #---------------------------------------------------------
