@@ -27,11 +27,11 @@ def get_fi_data(p_isin):
     st_code = response.status_code
     if st_code != 200:
         return 0, fi_name, fi_mat, fi_offer, fi_nominal, fi_nkd, fi_price,  ""    #-- облигация не найдена
-    #tabs = pd.read_html(response.text)
+    tabs = pd.read_html(response.text)
     #--------------------------------
     #-----   Купоны -----------------
     #--------------------------------
-    #df = tabs[0]
+    df = tabs[0]
     #coup = df[["Дата купона","Купон"]]  #-- Оставим только нужные колонки
     #coup.columns = ["cd","amounts"] #-- переименуем столбцы
     #coup["dates"] = datetime.datetime.today()   #-- Новый столбец даты
