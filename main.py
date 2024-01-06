@@ -18,6 +18,7 @@ def get_fi_data(p_isin):
     fi_nominal = ""
     fi_nkd = ""
     fi_price = ""
+    coup = ""
     #-----------------------------------
     #https://www.moex.com/ru/issue.aspx?board=TQCB&code=RU000A0ZYEB1&utm_source=www.moex.com/#/bond_4
     url = 'https://smart-lab.ru/q/bonds/' + p_isin
