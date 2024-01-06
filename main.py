@@ -141,7 +141,7 @@ if st.session_state['button'] == True:
                 f_enddate = datetime.datetime.strptime(fi_mat, "%d-%m-%Y")
             f_endsum = float(fi_nominal)    
             #---------   Добавляем налог с купонов ---
-            if use_nalog:
+            #if use_nalog:
                 #for index,row in pl.iterrows():
                 #        pl.loc[len(pl.index)] = [pl['dates'][index],round(pl['amounts'][index]*(-0.13),2)]
                 #--- если купили дешевле, то еще в конце срока
