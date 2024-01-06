@@ -147,7 +147,8 @@ if st.session_state['button'] == True:
                 #--- если купили дешевле, то еще в конце срока
                 if f_buysum < f_endsum:
                 #    pl.loc[len(pl.index)] = [f_enddate,round((f_endsum-f_buysum)*(-0.13),2)]      
-                    pl.loc[len(pl.index)] = [f_enddate,123]                      
+                #    pl.loc[len(pl.index)] = [f_enddate,123]   
+                    pl = pl.append({'dates': f_enddate, 'amounts': 123}, ignore_index=True)    
             #---------   Добавляем покупку  -----------
             pl.loc[len(pl.index)] = [f_buydate, f_buysum*(-1)]
             #---------   Добавляем погашение -----
